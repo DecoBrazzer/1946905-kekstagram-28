@@ -1,10 +1,9 @@
 import { getRandomInteger, generateComments } from './util.js';
 
-
 function generatePosts() {
   const objectArray = [];
 
-  for(let i = 0; i <= 25; i++) {
+  for(let i = 1; i <= 25; i++) {
     const crtImage = {
       id: i,
       url: `photos/${i}.jpg`,

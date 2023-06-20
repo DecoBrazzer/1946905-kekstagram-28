@@ -1,16 +1,15 @@
-import { generatePosts } from './data.js';
+import { PHOTO_CARDS_DATA, PICTURES_CONTAINER } from './constants.js';
 
-const pictureContainer = document.querySelector('#picture').content;
 
-const pictureItem = pictureContainer.querySelector('.picture');
+const picturePattern = document.querySelector('#picture').content;
+
+const pictureItem = picturePattern.querySelector('.picture');
 
 const fragment = document.createDocumentFragment();
 
-const dataList = generatePosts();
-
 
 function fillingСards() {
-  for(let i = 0; i < dataList.length; i++) {
+  for(let i = 0; i < PHOTO_CARDS_DATA.length; i++) {
     const element = pictureItem.cloneNode(true);
     element.classList.add('picture');
 
@@ -18,12 +17,13 @@ function fillingСards() {
     const pictureComment = element.querySelector('.picture__comments');
     const pictureLike = element.querySelector('.picture__likes');
 
-    pictureImg.src = dataList[i].url;
-    pictureComment.textContent = dataList[i].comments;
-    pictureLike.textContent = dataList[i].likes;
+    pictureImg.src = PHOTO_CARDS_DATA[i].url;
+    pictureComment.textContent = PHOTO_CARDS_DATA[i].comments.length;
+    pictureLike.textContent = PHOTO_CARDS_DATA[i].likes;
     fragment.appendChild(element);
   }
   return fragment;
 }
 
-export { fillingСards };
+PICTURES_CONTAINER.appendChild(fillingСards());
+

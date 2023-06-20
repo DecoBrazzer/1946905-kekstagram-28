@@ -6,15 +6,11 @@ function checkLength(inputLine, sizeLine) {
   return true;
 }
 
-checkLength('проверяемая строка', 18);
-
 function checkPolindrom(inputLine) {
   const reverseLine = inputLine.split('').reverse('').join('');
 
   return inputLine.toLowerCase() === reverseLine.toLowerCase() ;
 }
-
-checkPolindrom('ДовОд');
 
 function takeNumber(inputLine) {
   let num = '';
@@ -29,9 +25,6 @@ function takeNumber(inputLine) {
 
   return Number(num);
 }
-
-takeNumber('ECMAScript 2022');
-
 
 function padStart(str, minLength, padString) {
   if (str.length >= minLength) {
@@ -50,4 +43,5 @@ function padStart(str, minLength, padString) {
   return paddedStr + str;
 }
 
-padStart('1', 2, '0');
+
+export { checkLength, checkPolindrom, takeNumber, padStart };

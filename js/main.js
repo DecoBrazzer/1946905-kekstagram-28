@@ -1,6 +1,6 @@
-import { fillingСards } from './rendering.js';
+import './rendering.js';
+import './popup.js';
+import './fillPopup.js';
+import './renderingComments.js';
 
-const pictures = document.querySelector('.pictures');
 
-pictures.appendChild(fillingСards());
-console.log(pictures);

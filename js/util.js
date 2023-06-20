@@ -1,5 +1,6 @@
 function generateComments() {
   const comments = [];
+  const nameExamples = ['Артем', 'Никита', 'Сергей', 'Филлип', 'Влад'];
   const СommentExamples = [
     'Всё отлично!','В целом всё неплохо. Но не всё.',
     'Когда вы делаете фотографию, хорошо бы убирать палец из кадра. В конце концов это просто непрофессионально.',
@@ -8,8 +9,6 @@ function generateComments() {
     'Моя бабушка случайно чихнула с фотоаппаратом в руках и у неё получилась фотография лучше.'
   ];
   for (let i = 0; i <= 6; i++) {
-
-    const nameExamples = ['Артем', 'Никита', 'Сергей', 'Филлип', 'Влад'];
 
     const comment = {
       id: i,
@@ -30,5 +29,9 @@ function getRandomInteger (minInt, maxInt) {
   return result;
 }
 
+const isEscapeKey = function(evt) {
+  return evt.key === 'Escape';
+};
 
-export { getRandomInteger, generateComments };
+
+export { getRandomInteger, generateComments, isEscapeKey};
