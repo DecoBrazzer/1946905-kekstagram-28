@@ -9,3 +9,7 @@ export const PHOTO_CARDS_DATA = generatePosts();
 export const FULL_MODE = document.querySelector('.big-picture');
 
 export const CANCEL_FULL_MODE = FULL_MODE.querySelector('.big-picture__cancel');
+
+export const UPLOAD_FILE = document.querySelector('#upload-file');
+
+export const IMG_UPLOAD_OVERLAY = document.querySelector('.img-upload__overlay');

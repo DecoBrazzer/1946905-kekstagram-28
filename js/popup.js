@@ -1,5 +1,6 @@
 import { isEscapeKey } from './util.js';
 import { FULL_MODE, CANCEL_FULL_MODE, PICTURES_CONTAINER, BODY_DOCUMENT } from './constants.js';
+import './fillPopup.js';
 
 
 const pictureCards = PICTURES_CONTAINER.querySelectorAll('.picture');
