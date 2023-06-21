@@ -3,7 +3,7 @@ import { FULL_MODE, CANCEL_FULL_MODE, PICTURES_CONTAINER, BODY_DOCUMENT } from '
 import './fillPopup.js';
 
 
-const pictureCards = PICTURES_CONTAINER.querySelectorAll('.picture');
+const PICTURE_CARDS = PICTURES_CONTAINER.querySelectorAll('.picture');
 
 
 const removeClassHidden = function() {
@@ -27,8 +27,8 @@ function onDocumentKeyDown(evt) {
 }
 
 
-for (let i = 0; i < pictureCards.length; i++) {
-  pictureCards[i].addEventListener('click', removeClassHidden);
+for (let i = 0; i < PICTURE_CARDS.length; i++) {
+  PICTURE_CARDS[i].addEventListener('click', removeClassHidden);
 }
 CANCEL_FULL_MODE.addEventListener('click', addClassHidden);
 
