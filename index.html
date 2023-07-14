@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="vendor/nouislider/nouislider.css"/>
   <script type ='module'src="js/main.js"></script>
   <title>Кекстаграм</title>
 </head>
@@ -47,7 +48,7 @@
                   <!-- Изменение размера изображения -->
                   <fieldset class="img-upload__scale  scale">
                     <button type="button" class="scale__control  scale__control--smaller">Уменьшить</button>
-                    <input type="text" class="scale__control  scale__control--value" value="55%" title="Image Scale" name="scale" readonly>
+                    <input type="text" class="scale__control  scale__control--value" value="100%" title="Image Scale" name="scale" readonly>
                     <button type="button" class="scale__control  scale__control--bigger">Увеличить</button>
                   </fieldset>
 
@@ -117,14 +118,16 @@
                 <!-- Добавление хэш-тегов и комментария к изображению -->
                 <fieldset class="img-upload__text text">
                   <div class="img-upload__field-wrapper">
-                    <input class="text__hashtags" name="hashtags" placeholder="#ХэшТег">
+                    <input class="text__hashtags" type="text" name="hashtags" placeholder="#ХэшТег"  required
+                    data-pristine-required-message="Форма должна быть заполнена!">
                   </div>
                   <div class="img-upload__field-wrapper">
-                    <textarea class="text__description" name="description" placeholder="Ваш комментарий..."></textarea>
+                    <textarea class="text__description" name="description" placeholder="Ваш комментарий..."  required
+                    data-pristine-required-message="Форма должна быть заполнена!"></textarea>
                   </div>
                 </fieldset>
 
-                <!-- Кнопка для отправки данных на сервер -->
+                <!-- Кнопка для отпра вки данных на сервер -->
                 <button type="submit" class="img-upload__submit" id="upload-submit">Опубликовать</button>
               </div>
             </div>
@@ -233,5 +236,7 @@
     <div class="img-upload__message  img-upload__message--loading">Загружаем...</div>
   </template>
 
+  <script src="./vendor/pristine/pristine.min.js"></script>
+  <script src="./vendor/nouislider/nouislider.js"></script>
 </body>
 </html>
